@@ -44,6 +44,10 @@
     cursor: pointer;
 }
 
+.btn:active {
+    transform: scale(1);
+}
+
 .footer {
     position: absolute;
     bottom: 0;
