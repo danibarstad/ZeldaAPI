@@ -11,6 +11,8 @@ const container = document.createElement('div');
 container.setAttribute('class', 'container')
 main.appendChild(container);
 
+
+// games.addEventListener("click", getData('games'));
 games.addEventListener("click", getGame);
 characters.addEventListener("click", getCharacter);
 monsters.addEventListener("click", getMonster);
@@ -18,6 +20,43 @@ bosses.addEventListener("click", getBoss);
 dungeons.addEventListener("click", getDungeon);
 places.addEventListener("click", getPlace);
 items.addEventListener("click", getItem);
+
+// function getData(call) {
+//     fetch(`https://zelda-api.apius.cc/api/${call}`)
+//         .then(function (response) {
+//             return response.json();
+//         })
+//         .then(function(data) {
+//             appendData(data);
+//         })
+//         .catch(function (err) {
+//             console.log('error: ' + err);
+//         });
+//         function appendData(data) {
+//             data = data.data;
+//             data.forEach(i => {
+//                 console.log(i.name);
+//                 console.log(i.description)
+//                 // console.log(i);
+
+//                 const card = document.createElement('div');
+//                 card.setAttribute('class', 'card');
+    
+//                 const h1 = document.createElement('h1');
+//                 h1.setAttribute('id', 'title')
+//                 h1.textContent = i.name;
+    
+//                 const p = document.createElement('p');
+//                 p.setAttribute('id', 'desc')
+//                 i.description = i.description.substring(0, 300);
+//                 p.textContent = `${i.description}...`;
+    
+//                 container.appendChild(card);
+//                 card.appendChild(h1);
+//                 card.appendChild(p);
+//             })
+//         }
+// }
 
 function getGame() {
     fetch('https://zelda-api.apius.cc/api/games')
