@@ -9,7 +9,8 @@ const items = document.getElementById("items");
 
 const main = document.getElementById('main');
 
-r.addEventListener("click", clearPage)
+let container;
+// r.addEventListener("click", clearPage)
 games.addEventListener("click", getGame);
 characters.addEventListener("click", getCharacter);
 monsters.addEventListener("click", getMonster);
@@ -18,19 +19,26 @@ dungeons.addEventListener("click", getDungeon);
 places.addEventListener("click", getPlace);
 items.addEventListener("click", getItem);
 
-function clearPage() {
+
+// function createContainer() {
+    // const container = document.createElement('div');
+    // container.setAttribute('class', 'container')
+    // main.appendChild(container);
+// }
+
+// function clearPage() {
+//     if (container) {
+//         container.parentNode.removeChild(container);
+//     }
+// }
+
+function getGame() {
     if (container) {
         container.parentNode.removeChild(container);
     }
-}
-
-function createContainer() {
-    const container = document.createElement('div');
+    document.createElement('div');
     container.setAttribute('class', 'container')
     main.appendChild(container);
-}
-
-function getGame() {
     fetch('https://zelda-api.apius.cc/api/games')
         .then(function (response) {
             return response.json();
