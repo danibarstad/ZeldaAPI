@@ -10,7 +10,7 @@ const items = document.getElementById("items");
 const main = document.getElementById('main');
 
 r.addEventListener("click", clearPage)
-games.addEventListener("click", getGame;
+games.addEventListener("click", getGame);
 characters.addEventListener("click", getCharacter);
 monsters.addEventListener("click", getMonster);
 bosses.addEventListener("click", getBoss);
