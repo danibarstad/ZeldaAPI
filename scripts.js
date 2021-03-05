@@ -8,37 +8,58 @@ const places = document.getElementById("places");
 const items = document.getElementById("items");
 
 const main = document.getElementById('main');
-
 let container;
-// r.addEventListener("click", clearPage)
-games.addEventListener("click", getGame);
-characters.addEventListener("click", getCharacter);
-monsters.addEventListener("click", getMonster);
-bosses.addEventListener("click", getBoss);
-dungeons.addEventListener("click", getDungeon);
-places.addEventListener("click", getPlace);
-items.addEventListener("click", getItem);
 
+r.addEventListener("click", clearPage)
+games.addEventListener("click", () => {
+    clearPage();
+    createContainer();
+    getGame();
+});
+characters.addEventListener("click", () => {
+    clearPage();
+    createContainer();
+    getCharacter();
+});
+monsters.addEventListener("click", () => {
+    clearPage();
+    createContainer();
+    getMonster();
+});
+bosses.addEventListener("click", () => {
+    clearPage();
+    createContainer();
+    getBoss();
+});
+dungeons.addEventListener("click", () => {
+    clearPage();
+    createContainer();
+    getDungeon();
+});
+places.addEventListener("click", () => {
+    clearPage();
+    createContainer();
+    getPlace();
+});
+items.addEventListener("click", () => {
+    clearPage();
+    createContainer();
+    getItem();
+});
 
-// function createContainer() {
-    // const container = document.createElement('div');
-    // container.setAttribute('class', 'container')
-    // main.appendChild(container);
-// }
+function createContainer() {
+    container = document.createElement('div');
+    container.setAttribute('class', 'container')
+    main.appendChild(container);
+}
 
-// function clearPage() {
-//     if (container) {
-//         container.parentNode.removeChild(container);
-//     }
-// }
-
-function getGame() {
+function clearPage() {
     if (container) {
         container.parentNode.removeChild(container);
     }
-    document.createElement('div');
-    container.setAttribute('class', 'container')
-    main.appendChild(container);
+}
+
+function getGame() {
     fetch('https://zelda-api.apius.cc/api/games')
         .then(function (response) {
             return response.json();
