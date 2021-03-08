@@ -60,7 +60,7 @@ function clearPage() {
 }
 
 function getData(objStr) {
-    fetch(`https://zelda-api.apius.cc/api/${objStr}`)
+    fetch(`https://proxy-server-69420.herokuapp.com/https://zelda-api.apius.cc/api/${objStr}`)
         .then(function (response) {
             return response.json();
         })
