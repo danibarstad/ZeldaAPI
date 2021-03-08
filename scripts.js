@@ -86,8 +86,8 @@ function getData(objStr) {
     
                 const p = document.createElement('p');
                 p.setAttribute('id', 'desc')
-                obj.description = obj.description.substring(0, 300);
-                p.textContent = `${obj.description}...`;
+                // obj.description = obj.description.substring(0, 300);
+                p.textContent = `${obj.description}`;
     
                 container.appendChild(card);
                 card.appendChild(h1);

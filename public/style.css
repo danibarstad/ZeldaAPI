@@ -97,6 +97,7 @@
 
 .card:hover {
     transform: scale(1.01);
+    /* overflow: auto; */
 }
 
 .footer {
